@@ -1,0 +1,6 @@
+com\duoc\backend\JWTAuthorizationFilterTest.class
+com\duoc\testsupport\TestSecurityEndpointsController.class
+com\duoc\backend\BackendApplicationTests.class
+com\duoc\backend\PatientControllerTest.class
+com\duoc\backend\WebSecurityConfigTest.class
+com\duoc\backend\LoginControllerTest.class

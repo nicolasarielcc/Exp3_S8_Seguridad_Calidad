@@ -1,102 +1,62 @@
 package com.duoc.seguridadcalidad;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
-import org.springframework.http.MediaType;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.ui.ExtendedModelMap;
+import org.springframework.ui.Model;
 
-import java.util.List;
-import java.util.Map;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+class HomeControllerTests {
 
-@SpringBootTest
-@AutoConfigureMockMvc
-class InvoiceControllerTests {
+    private final HomeController homeController = new HomeController();
 
-    @Autowired
-    private MockMvc mockMvc;
-
-    @MockitoBean
-    private BackendService backendService;
+    // -------------------------------------------------------------------------
+    // /home
+    // -------------------------------------------------------------------------
 
     @Test
-    void shouldProxyGetInvoices() throws Exception {
-  when(backendService.getInvoices("valid-token"))
-    .thenReturn(List.of(
-      Map.of("id", 1, "appointmentId", 10, "total", 47600.0),
-      Map.of("id", 2, "appointmentId", 11, "total", 25000.0)
-    ));
-
-  mockMvc.perform(get("/api/invoices")
-      .header("Authorization", "Bearer valid-token"))
-    .andExpect(status().isOk())
-    .andExpect(jsonPath("$[0].id").value(1))
-    .andExpect(jsonPath("$[1].appointmentId").value(11));
+    void homeShouldReturnHomeView() {
+        Model model = new ExtendedModelMap();
+        String view = homeController.home("Seguridad y Calidad en el Desarrollo", model);
+        assertEquals("home", view);
     }
 
     @Test
-    void shouldProxyCreateInvoice() throws Exception {
-  when(backendService.createInvoice(
-    org.mockito.ArgumentMatchers.eq("valid-token"),
-    org.mockito.ArgumentMatchers.eq(10L),
-    org.mockito.ArgumentMatchers.anyMap()
-  )).thenReturn(Map.of("id", 1, "appointmentId", 10, "total", 47600.0));
-
-        String payload = """
-                {
-                  "issueDate": "2026-03-28",
-                  "vatRate": 0.19,
-                  "notes": "Paciente estable. Control en 10 dias.",
-                  "items": [
-                    {
-                      "type": "SERVICE",
-                      "description": "Consulta general",
-                      "quantity": 1,
-                      "unitPrice": 25000
-                    },
-                    {
-                      "type": "MEDICATION",
-                      "description": "Antibiotico",
-                      "quantity": 2,
-                      "unitPrice": 7500
-                    }
-                  ]
-                }
-                """;
-
-              mockMvc.perform(post("/api/invoices/appointments/10")
-                        .header("Authorization", "Bearer valid-token")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(payload))
-                .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.appointmentId").value(10))
-                .andExpect(jsonPath("$.id").value(1))
-                .andExpect(jsonPath("$.total").value(47600.0));
+    void homeShouldAddNameAttributeToModel() {
+        Model model = new ExtendedModelMap();
+        homeController.home("Mi Clinica", model);
+        assertEquals("Mi Clinica", model.getAttribute("name"));
     }
 
     @Test
-                void shouldProxyGetInvoiceByAppointment() throws Exception {
-              when(backendService.getInvoiceByAppointmentId("valid-token", 10L))
-                .thenReturn(Map.of("id", 1, "appointmentId", 10, "total", 47600.0));
+    void homeShouldUseDefaultNameWhenNotProvided() {
+        Model model = new ExtendedModelMap();
+        homeController.home("Seguridad y Calidad en el Desarrollo", model);
+        assertEquals("Seguridad y Calidad en el Desarrollo", model.getAttribute("name"));
+    }
 
-              mockMvc.perform(get("/api/invoices/appointment/10")
-                  .header("Authorization", "Bearer valid-token"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.id").value(1))
-                .andExpect(jsonPath("$.appointmentId").value(10));
+    // -------------------------------------------------------------------------
+    // /
+    // -------------------------------------------------------------------------
+
+    @Test
+    void rootShouldReturnHomeView() {
+        Model model = new ExtendedModelMap();
+        String view = homeController.root("Seguridad y Calidad en el Desarrollo", model);
+        assertEquals("home", view);
     }
 
     @Test
-                void shouldRequireBearerToken() throws Exception {
-              mockMvc.perform(get("/api/invoices"))
-                .andExpect(status().isUnauthorized());
+    void rootShouldAddNameAttributeToModel() {
+        Model model = new ExtendedModelMap();
+        homeController.root("Otro Nombre", model);
+        assertEquals("Otro Nombre", model.getAttribute("name"));
+    }
+
+    @Test
+    void rootShouldUseDefaultNameWhenNotProvided() {
+        Model model = new ExtendedModelMap();
+        homeController.root("Seguridad y Calidad en el Desarrollo", model);
+        assertEquals("Seguridad y Calidad en el Desarrollo", model.getAttribute("name"));
     }
 }

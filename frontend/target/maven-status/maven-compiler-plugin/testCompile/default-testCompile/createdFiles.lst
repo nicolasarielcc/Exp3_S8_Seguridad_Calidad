@@ -1,0 +1,7 @@
+com\duoc\seguridadcalidad\SeguridadcalidadApplicationTests.class
+com\duoc\seguridadcalidad\InvoiceControllerTests.class
+com\duoc\seguridadcalidad\HomeControllerTests.class
+com\duoc\seguridadcalidad\BackendServiceTests.class
+com\duoc\seguridadcalidad\InvoiceLineItemTypeTests.class
+com\duoc\seguridadcalidad\PatientRepositoryTests.class
+com\duoc\seguridadcalidad\PetControllerTests.class

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InvoicePageController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">frontend-seguridadcalidad</a> &gt; <a href="index.source.html" class="el_package">com.duoc.seguridadcalidad</a> &gt; <span class="el_source">InvoicePageController.java</span></div><h1>InvoicePageController.java</h1><pre class="source lang-java linenums">package com.duoc.seguridadcalidad;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@Controller
+<span class="fc" id="L8">public class InvoicePageController {</span>
+
+    @GetMapping(&quot;/billing&quot;)
+    public String listInvoices() {
+<span class="nc" id="L12">        return &quot;invoices&quot;;</span>
+    }
+
+    @GetMapping(&quot;/billing/new&quot;)
+    public String showCreateForm() {
+<span class="nc" id="L17">        return &quot;new_invoice&quot;;</span>
+    }
+
+    @GetMapping(&quot;/billing/{id}&quot;)
+    public String showInvoiceDetail(@PathVariable Long id) {
+<span class="nc" id="L22">        return &quot;invoice_detail&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

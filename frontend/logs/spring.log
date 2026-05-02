@@ -1,13 +1,28 @@
-2026-04-30T14:44:26.807-04:00  INFO 24368 --- [seguridadcalidad] [main] c.d.s.InvoiceControllerTests             : Starting InvoiceControllerTests using Java 21.0.10 with PID 24368 (started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
-2026-04-30T14:44:26.812-04:00  INFO 24368 --- [seguridadcalidad] [main] c.d.s.InvoiceControllerTests             : No active profile set, falling back to 1 default profile: "default"
-2026-04-30T14:44:29.691-04:00  INFO 24368 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
-2026-04-30T14:44:31.231-04:00  INFO 24368 --- [seguridadcalidad] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-04-30T14:44:31.233-04:00  INFO 24368 --- [seguridadcalidad] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-04-30T14:44:31.237-04:00  INFO 24368 --- [seguridadcalidad] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-2026-04-30T14:44:31.291-04:00  INFO 24368 --- [seguridadcalidad] [main] c.d.s.InvoiceControllerTests             : Started InvoiceControllerTests in 5.367 seconds (process running for 13.51)
-2026-04-30T14:44:32.047-04:00  INFO 24368 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.SeguridadcalidadApplicationTests]: SeguridadcalidadApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-04-30T14:44:32.054-04:00  INFO 24368 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.SeguridadcalidadApplicationTests
-2026-04-30T14:44:32.157-04:00  INFO 24368 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : Starting SeguridadcalidadApplicationTests using Java 21.0.10 with PID 24368 (started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
-2026-04-30T14:44:32.157-04:00  INFO 24368 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : No active profile set, falling back to 1 default profile: "default"
-2026-04-30T14:44:32.870-04:00  INFO 24368 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
-2026-04-30T14:44:33.061-04:00  INFO 24368 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : Started SeguridadcalidadApplicationTests in 0.988 seconds (process running for 15.28)
+2026-05-01T21:39:55.040-04:00  INFO 26796 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : Starting SeguridadcalidadApplication using Java 21.0.10 with PID 26796 (C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend\target\classes started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
+2026-05-01T21:39:55.051-04:00  INFO 26796 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-05-01T21:39:56.391-04:00  INFO 26796 --- [seguridadcalidad] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-01T21:39:56.405-04:00  INFO 26796 --- [seguridadcalidad] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-01T21:39:56.405-04:00  INFO 26796 --- [seguridadcalidad] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-05-01T21:39:56.472-04:00  INFO 26796 --- [seguridadcalidad] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1314 ms
+2026-05-01T21:39:56.833-04:00  INFO 26796 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-05-01T21:39:57.248-04:00  INFO 26796 --- [seguridadcalidad] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-01T21:39:57.254-04:00  INFO 26796 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : Started SeguridadcalidadApplication in 2.871 seconds (process running for 3.308)
+2026-05-01T21:39:57.498-04:00  INFO 26796 --- [seguridadcalidad] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-01T21:39:57.499-04:00  INFO 26796 --- [seguridadcalidad] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-01T21:39:57.501-04:00  INFO 26796 --- [seguridadcalidad] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-01T21:45:16.550-04:00  INFO 26796 --- [seguridadcalidad] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-01T21:45:16.576-04:00  INFO 26796 --- [seguridadcalidad] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-01T21:45:42.477-04:00  INFO 25672 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : Starting SeguridadcalidadApplication using Java 21.0.10 with PID 25672 (C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend\target\classes started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
+2026-05-01T21:45:42.481-04:00  INFO 25672 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-05-01T21:45:43.620-04:00  INFO 25672 --- [seguridadcalidad] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-01T21:45:43.636-04:00  INFO 25672 --- [seguridadcalidad] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-01T21:45:43.637-04:00  INFO 25672 --- [seguridadcalidad] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-05-01T21:45:43.706-04:00  INFO 25672 --- [seguridadcalidad] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1153 ms
+2026-05-01T21:45:44.121-04:00  INFO 25672 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-05-01T21:45:44.697-04:00  INFO 25672 --- [seguridadcalidad] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-01T21:45:44.707-04:00  INFO 25672 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : Started SeguridadcalidadApplication in 2.771 seconds (process running for 3.406)
+2026-05-01T21:46:27.391-04:00  INFO 25672 --- [seguridadcalidad] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-01T21:46:27.396-04:00  INFO 25672 --- [seguridadcalidad] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-01T21:46:27.403-04:00  INFO 25672 --- [seguridadcalidad] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-05-01T21:49:42.406-04:00  INFO 25672 --- [seguridadcalidad] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-01T21:49:42.421-04:00  INFO 25672 --- [seguridadcalidad] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

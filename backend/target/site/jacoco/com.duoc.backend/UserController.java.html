@@ -49,13 +49,13 @@ import org.springframework.web.bind.annotation.RestController;
     })
     public ResponseEntity&lt;?&gt; registerUser(@RequestBody UserRegistrationRequest request) {
         try {
-<span class="nc" id="L52">            User user = userService.registerUser(request);</span>
-<span class="nc" id="L53">            UserResponse response = new UserResponse(user.getId(), user.getUsername(), user.getEmail());</span>
-<span class="nc" id="L54">            return ResponseEntity.status(HttpStatus.CREATED).body(response);</span>
-<span class="nc" id="L55">        } catch (IllegalArgumentException e) {</span>
-<span class="nc" id="L56">            Map&lt;String, String&gt; error = new HashMap&lt;&gt;();</span>
-<span class="nc" id="L57">            error.put(&quot;message&quot;, e.getMessage());</span>
-<span class="nc" id="L58">            return ResponseEntity.badRequest().body(error);</span>
+<span class="fc" id="L52">            User user = userService.registerUser(request);</span>
+<span class="fc" id="L53">            UserResponse response = new UserResponse(user.getId(), user.getUsername(), user.getEmail());</span>
+<span class="fc" id="L54">            return ResponseEntity.status(HttpStatus.CREATED).body(response);</span>
+<span class="fc" id="L55">        } catch (IllegalArgumentException e) {</span>
+<span class="fc" id="L56">            Map&lt;String, String&gt; error = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L57">            error.put(&quot;message&quot;, e.getMessage());</span>
+<span class="fc" id="L58">            return ResponseEntity.badRequest().body(error);</span>
         }
     }
 }

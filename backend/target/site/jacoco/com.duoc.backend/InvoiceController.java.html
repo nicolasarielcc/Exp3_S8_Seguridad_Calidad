@@ -27,40 +27,40 @@ import java.util.Optional;
     @PostMapping(&quot;/appointments/{appointmentId}&quot;)
     public ResponseEntity&lt;?&gt; createInvoiceForAppointment(@PathVariable Integer appointmentId, @RequestBody Invoice invoice) {
         try {
-<span class="nc bnc" id="L30" title="All 2 branches missed.">            if (!appointmentRepository.existsById(appointmentId)) {</span>
-<span class="nc" id="L31">                return ResponseEntity.badRequest().body(&quot;Appointment not found for appointmentId: &quot; + appointmentId);</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">            if (!appointmentRepository.existsById(appointmentId)) {</span>
+<span class="fc" id="L31">                return ResponseEntity.badRequest().body(&quot;Appointment not found for appointmentId: &quot; + appointmentId);</span>
             }
 
-<span class="nc" id="L34">            List&lt;Invoice&gt; existingInvoices = invoiceRepository.findByAppointmentId(appointmentId);</span>
-<span class="nc bnc" id="L35" title="All 2 branches missed.">            if (!existingInvoices.isEmpty()) {</span>
-<span class="nc" id="L36">                return ResponseEntity.status(HttpStatus.CONFLICT)</span>
-<span class="nc" id="L37">                        .body(&quot;An invoice already exists for appointmentId: &quot; + appointmentId);</span>
+<span class="fc" id="L34">            List&lt;Invoice&gt; existingInvoices = invoiceRepository.findByAppointmentId(appointmentId);</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            if (!existingInvoices.isEmpty()) {</span>
+<span class="fc" id="L36">                return ResponseEntity.status(HttpStatus.CONFLICT)</span>
+<span class="fc" id="L37">                        .body(&quot;An invoice already exists for appointmentId: &quot; + appointmentId);</span>
             }
 
-<span class="nc" id="L40">            String validationError = validateInvoicePayload(invoice);</span>
-<span class="nc bnc" id="L41" title="All 2 branches missed.">            if (validationError != null) {</span>
-<span class="nc" id="L42">                return ResponseEntity.badRequest().body(validationError);</span>
+<span class="fc" id="L40">            String validationError = validateInvoicePayload(invoice);</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">            if (validationError != null) {</span>
+<span class="fc" id="L42">                return ResponseEntity.badRequest().body(validationError);</span>
             }
 
-<span class="nc" id="L45">            invoice.setAppointmentId(appointmentId);</span>
-<span class="nc bnc" id="L46" title="All 2 branches missed.">            if (invoice.getIssueDate() == null) {</span>
-<span class="nc" id="L47">                invoice.setIssueDate(LocalDate.now());</span>
+<span class="fc" id="L45">            invoice.setAppointmentId(appointmentId);</span>
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">            if (invoice.getIssueDate() == null) {</span>
+<span class="fc" id="L47">                invoice.setIssueDate(LocalDate.now());</span>
             }
-<span class="nc bnc" id="L49" title="All 2 branches missed.">            if (invoice.getVatRate() == null) {</span>
-<span class="nc" id="L50">                invoice.setVatRate(DEFAULT_VAT_RATE);</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">            if (invoice.getVatRate() == null) {</span>
+<span class="fc" id="L50">                invoice.setVatRate(DEFAULT_VAT_RATE);</span>
             }
 
-<span class="nc bnc" id="L53" title="All 2 branches missed.">            for (InvoiceLineItem item : invoice.getItems()) {</span>
-<span class="nc" id="L54">                item.setInvoice(invoice);</span>
-<span class="nc" id="L55">            }</span>
-<span class="nc" id="L56">            invoice.calculateTotals();</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            for (InvoiceLineItem item : invoice.getItems()) {</span>
+<span class="fc" id="L54">                item.setInvoice(invoice);</span>
+<span class="fc" id="L55">            }</span>
+<span class="fc" id="L56">            invoice.calculateTotals();</span>
 
-<span class="nc" id="L58">            Invoice savedInvoice = invoiceRepository.save(invoice);</span>
-<span class="nc" id="L59">            return ResponseEntity.status(HttpStatus.CREATED).body(savedInvoice);</span>
-<span class="nc" id="L60">        } catch (Exception e) {</span>
-<span class="nc" id="L61">            Map&lt;String, String&gt; error = new HashMap&lt;&gt;();</span>
-<span class="nc" id="L62">            error.put(&quot;message&quot;, &quot;Error al generar factura: &quot; + e.getMessage());</span>
-<span class="nc" id="L63">            return ResponseEntity.badRequest().body(error);</span>
+<span class="fc" id="L58">            Invoice savedInvoice = invoiceRepository.save(invoice);</span>
+<span class="fc" id="L59">            return ResponseEntity.status(HttpStatus.CREATED).body(savedInvoice);</span>
+<span class="fc" id="L60">        } catch (Exception e) {</span>
+<span class="fc" id="L61">            Map&lt;String, String&gt; error = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L62">            error.put(&quot;message&quot;, &quot;Error al generar factura: &quot; + e.getMessage());</span>
+<span class="fc" id="L63">            return ResponseEntity.badRequest().body(error);</span>
         }
     }
 
@@ -87,13 +87,13 @@ import java.util.Optional;
     @GetMapping(&quot;/appointment/{appointmentId}&quot;)
     public ResponseEntity&lt;?&gt; getInvoiceByAppointment(@PathVariable Integer appointmentId) {
         try {
-<span class="nc bnc" id="L90" title="All 2 branches missed.">            if (!appointmentRepository.existsById(appointmentId)) {</span>
-<span class="nc" id="L91">                return ResponseEntity.notFound().build();</span>
+<span class="fc bfc" id="L90" title="All 2 branches covered.">            if (!appointmentRepository.existsById(appointmentId)) {</span>
+<span class="fc" id="L91">                return ResponseEntity.notFound().build();</span>
             }
 
-<span class="nc" id="L94">            List&lt;Invoice&gt; invoices = invoiceRepository.findByAppointmentId(appointmentId);</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">            if (invoices.isEmpty()) {</span>
-<span class="nc" id="L96">                return ResponseEntity.notFound().build();</span>
+<span class="fc" id="L94">            List&lt;Invoice&gt; invoices = invoiceRepository.findByAppointmentId(appointmentId);</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">            if (invoices.isEmpty()) {</span>
+<span class="fc" id="L96">                return ResponseEntity.notFound().build();</span>
             }
 <span class="nc" id="L98">            return ResponseEntity.ok(invoices.get(0));</span>
 <span class="nc" id="L99">        } catch (Exception e) {</span>
@@ -102,40 +102,40 @@ import java.util.Optional;
     }
 
     private String validateInvoicePayload(Invoice invoice) {
-<span class="nc bnc" id="L105" title="All 2 branches missed.">        if (invoice == null) {</span>
+<span class="pc bpc" id="L105" title="1 of 2 branches missed.">        if (invoice == null) {</span>
 <span class="nc" id="L106">            return &quot;Invoice payload is required&quot;;</span>
         }
 
-<span class="nc bnc" id="L109" title="All 4 branches missed.">        if (invoice.getItems() == null || invoice.getItems().isEmpty()) {</span>
-<span class="nc" id="L110">            return &quot;Invoice must include at least one detail item&quot;;</span>
+<span class="pc bpc" id="L109" title="1 of 4 branches missed.">        if (invoice.getItems() == null || invoice.getItems().isEmpty()) {</span>
+<span class="fc" id="L110">            return &quot;Invoice must include at least one detail item&quot;;</span>
         }
 
-<span class="nc bnc" id="L113" title="All 4 branches missed.">        if (invoice.getVatRate() != null &amp;&amp; invoice.getVatRate().compareTo(BigDecimal.ZERO) &lt; 0) {</span>
+<span class="pc bpc" id="L113" title="3 of 4 branches missed.">        if (invoice.getVatRate() != null &amp;&amp; invoice.getVatRate().compareTo(BigDecimal.ZERO) &lt; 0) {</span>
 <span class="nc" id="L114">            return &quot;vatRate cannot be negative&quot;;</span>
         }
 
-<span class="nc bnc" id="L117" title="All 2 branches missed.">        for (int i = 0; i &lt; invoice.getItems().size(); i++) {</span>
-<span class="nc" id="L118">            InvoiceLineItem item = invoice.getItems().get(i);</span>
-<span class="nc" id="L119">            int lineNumber = i + 1;</span>
+<span class="fc bfc" id="L117" title="All 2 branches covered.">        for (int i = 0; i &lt; invoice.getItems().size(); i++) {</span>
+<span class="fc" id="L118">            InvoiceLineItem item = invoice.getItems().get(i);</span>
+<span class="fc" id="L119">            int lineNumber = i + 1;</span>
 
-<span class="nc bnc" id="L121" title="All 2 branches missed.">            if (item.getType() == null) {</span>
+<span class="pc bpc" id="L121" title="1 of 2 branches missed.">            if (item.getType() == null) {</span>
 <span class="nc" id="L122">                return &quot;Item &quot; + lineNumber + &quot; must define type (SERVICE, MEDICATION, ADDITIONAL_CHARGE)&quot;;</span>
             }
 
-<span class="nc bnc" id="L125" title="All 4 branches missed.">            if (item.getDescription() == null || item.getDescription().trim().isEmpty()) {</span>
+<span class="pc bpc" id="L125" title="2 of 4 branches missed.">            if (item.getDescription() == null || item.getDescription().trim().isEmpty()) {</span>
 <span class="nc" id="L126">                return &quot;Item &quot; + lineNumber + &quot; must include a description&quot;;</span>
             }
 
-<span class="nc bnc" id="L129" title="All 4 branches missed.">            if (item.getQuantity() == null || item.getQuantity() &lt;= 0) {</span>
+<span class="pc bpc" id="L129" title="2 of 4 branches missed.">            if (item.getQuantity() == null || item.getQuantity() &lt;= 0) {</span>
 <span class="nc" id="L130">                return &quot;Item &quot; + lineNumber + &quot; must include a quantity greater than zero&quot;;</span>
             }
 
-<span class="nc bnc" id="L133" title="All 4 branches missed.">            if (item.getUnitPrice() == null || item.getUnitPrice().compareTo(BigDecimal.ZERO) &lt; 0) {</span>
+<span class="pc bpc" id="L133" title="2 of 4 branches missed.">            if (item.getUnitPrice() == null || item.getUnitPrice().compareTo(BigDecimal.ZERO) &lt; 0) {</span>
 <span class="nc" id="L134">                return &quot;Item &quot; + lineNumber + &quot; must include a unitPrice greater or equal to zero&quot;;</span>
             }
         }
 
-<span class="nc" id="L138">        return null;</span>
+<span class="fc" id="L138">        return null;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

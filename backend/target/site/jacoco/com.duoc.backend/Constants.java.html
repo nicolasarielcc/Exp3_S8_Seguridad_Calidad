@@ -18,8 +18,8 @@ import java.security.Key;
     public static final long TOKEN_EXPIRATION_TIME = 864_000_000; // 1 day
 
     public static Key getSigningKeyB64(String secret) {
-<span class="nc" id="L21">        byte[] keyBytes = Decoders.BASE64.decode(secret);</span>
-<span class="nc" id="L22">        return Keys.hmacShaKeyFor(keyBytes);</span>
+<span class="fc" id="L21">        byte[] keyBytes = Decoders.BASE64.decode(secret);</span>
+<span class="fc" id="L22">        return Keys.hmacShaKeyFor(keyBytes);</span>
     }
 
     public static Key getSigningKey(String secret) {

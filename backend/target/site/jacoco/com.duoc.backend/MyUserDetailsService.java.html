@@ -27,11 +27,11 @@ import org.slf4j.LoggerFactory;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-<span class="nc" id="L30">        User user = userRepository.findByUsername(username);</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">        if (user == null) {</span>
-<span class="nc" id="L32">            throw new UsernameNotFoundException(username);</span>
+<span class="fc" id="L30">        User user = userRepository.findByUsername(username);</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (user == null) {</span>
+<span class="fc" id="L32">            throw new UsernameNotFoundException(username);</span>
         }
-<span class="nc" id="L34">        return user;</span>
+<span class="fc" id="L34">        return user;</span>
     }
 
     @Bean

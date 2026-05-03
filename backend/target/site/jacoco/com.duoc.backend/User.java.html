@@ -27,59 +27,59 @@ import jakarta.persistence.Id;
     private String password;
 
     public Integer getId() {
-<span class="nc" id="L30">        return id;</span>
+<span class="fc" id="L30">        return id;</span>
     }
 
     public void setId(Integer id) {
-<span class="nc" id="L34">        this.id = id;</span>
-<span class="nc" id="L35">    }</span>
+<span class="fc" id="L34">        this.id = id;</span>
+<span class="fc" id="L35">    }</span>
 
     public String getUsername() {
-<span class="nc" id="L38">        return username;</span>
+<span class="fc" id="L38">        return username;</span>
     }
 
     public void setUsername(String username) {
-<span class="nc" id="L42">        this.username = username;</span>
-<span class="nc" id="L43">    }</span>
+<span class="fc" id="L42">        this.username = username;</span>
+<span class="fc" id="L43">    }</span>
 
     public String getEmail() {
-<span class="nc" id="L46">        return email;</span>
+<span class="fc" id="L46">        return email;</span>
     }
 
     public void setEmail(String email) {
-<span class="nc" id="L50">        this.email = email;</span>
-<span class="nc" id="L51">    }</span>
+<span class="fc" id="L50">        this.email = email;</span>
+<span class="fc" id="L51">    }</span>
 
     public String getPassword() {
-<span class="nc" id="L54">        return password;</span>
+<span class="fc" id="L54">        return password;</span>
     }
 
     public void setPassword(String password) {
-<span class="nc" id="L58">        this.password = password;</span>
-<span class="nc" id="L59">    }</span>
+<span class="fc" id="L58">        this.password = password;</span>
+<span class="fc" id="L59">    }</span>
     @Override
     public Collection&lt;? extends GrantedAuthority&gt; getAuthorities() {
-<span class="nc" id="L62">        return Collections.emptyList();</span>
+<span class="fc" id="L62">        return Collections.emptyList();</span>
     }
 
     @Override
     public boolean isAccountNonExpired() {
-<span class="nc" id="L67">        return true;</span>
+<span class="fc" id="L67">        return true;</span>
     }
 
     @Override
     public boolean isAccountNonLocked() {
-<span class="nc" id="L72">        return true;</span>
+<span class="fc" id="L72">        return true;</span>
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-<span class="nc" id="L77">        return true;</span>
+<span class="fc" id="L77">        return true;</span>
     }
 
     @Override
     public boolean isEnabled() {
-<span class="nc" id="L82">        return true;</span>
+<span class="fc" id="L82">        return true;</span>
     }
 
 }

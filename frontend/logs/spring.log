@@ -1,41 +1,429 @@
-2026-05-01T21:39:55.040-04:00  INFO 26796 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : Starting SeguridadcalidadApplication using Java 21.0.10 with PID 26796 (C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend\target\classes started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
-2026-05-01T21:39:55.051-04:00  INFO 26796 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-05-01T21:39:56.391-04:00  INFO 26796 --- [seguridadcalidad] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-01T21:39:56.405-04:00  INFO 26796 --- [seguridadcalidad] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-01T21:39:56.405-04:00  INFO 26796 --- [seguridadcalidad] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
-2026-05-01T21:39:56.472-04:00  INFO 26796 --- [seguridadcalidad] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1314 ms
-2026-05-01T21:39:56.833-04:00  INFO 26796 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
-2026-05-01T21:39:57.248-04:00  INFO 26796 --- [seguridadcalidad] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-01T21:39:57.254-04:00  INFO 26796 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : Started SeguridadcalidadApplication in 2.871 seconds (process running for 3.308)
-2026-05-01T21:39:57.498-04:00  INFO 26796 --- [seguridadcalidad] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-01T21:39:57.499-04:00  INFO 26796 --- [seguridadcalidad] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-01T21:39:57.501-04:00  INFO 26796 --- [seguridadcalidad] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-01T21:45:16.550-04:00  INFO 26796 --- [seguridadcalidad] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-01T21:45:16.576-04:00  INFO 26796 --- [seguridadcalidad] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-01T21:45:42.477-04:00  INFO 25672 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : Starting SeguridadcalidadApplication using Java 21.0.10 with PID 25672 (C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend\target\classes started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
-2026-05-01T21:45:42.481-04:00  INFO 25672 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-05-01T21:45:43.620-04:00  INFO 25672 --- [seguridadcalidad] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-01T21:45:43.636-04:00  INFO 25672 --- [seguridadcalidad] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-01T21:45:43.637-04:00  INFO 25672 --- [seguridadcalidad] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
-2026-05-01T21:45:43.706-04:00  INFO 25672 --- [seguridadcalidad] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1153 ms
-2026-05-01T21:45:44.121-04:00  INFO 25672 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
-2026-05-01T21:45:44.697-04:00  INFO 25672 --- [seguridadcalidad] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-01T21:45:44.707-04:00  INFO 25672 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : Started SeguridadcalidadApplication in 2.771 seconds (process running for 3.406)
-2026-05-01T21:46:27.391-04:00  INFO 25672 --- [seguridadcalidad] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-01T21:46:27.396-04:00  INFO 25672 --- [seguridadcalidad] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-01T21:46:27.403-04:00  INFO 25672 --- [seguridadcalidad] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2026-05-01T21:49:42.406-04:00  INFO 25672 --- [seguridadcalidad] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-01T21:49:42.421-04:00  INFO 25672 --- [seguridadcalidad] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-01T23:01:44.879-04:00  INFO 13400 --- [seguridadcalidad] [main] c.d.s.InvoiceControllerTests             : Starting InvoiceControllerTests using Java 21.0.10 with PID 13400 (started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
-2026-05-01T23:01:44.886-04:00  INFO 13400 --- [seguridadcalidad] [main] c.d.s.InvoiceControllerTests             : No active profile set, falling back to 1 default profile: "default"
-2026-05-01T23:01:51.384-04:00  INFO 13400 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
-2026-05-01T23:01:54.160-04:00  INFO 13400 --- [seguridadcalidad] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2026-05-01T23:01:54.162-04:00  INFO 13400 --- [seguridadcalidad] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2026-05-01T23:01:54.168-04:00  INFO 13400 --- [seguridadcalidad] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
-2026-05-01T23:01:54.254-04:00  INFO 13400 --- [seguridadcalidad] [main] c.d.s.InvoiceControllerTests             : Started InvoiceControllerTests in 10.794 seconds (process running for 29.906)
-2026-05-01T23:01:55.457-04:00  INFO 13400 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.SeguridadcalidadApplicationTests]: SeguridadcalidadApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2026-05-01T23:01:55.462-04:00  INFO 13400 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.SeguridadcalidadApplicationTests
-2026-05-01T23:01:55.622-04:00  INFO 13400 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : Starting SeguridadcalidadApplicationTests using Java 21.0.10 with PID 13400 (started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
-2026-05-01T23:01:55.624-04:00  INFO 13400 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : No active profile set, falling back to 1 default profile: "default"
-2026-05-01T23:01:56.776-04:00  INFO 13400 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
-2026-05-01T23:01:57.057-04:00  INFO 13400 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : Started SeguridadcalidadApplicationTests in 1.555 seconds (process running for 32.709)
+2026-05-02T22:13:14.038-04:00  INFO 19560 --- [seguridadcalidad] [main] c.d.s.AppointmentRestControllerTests     : Starting AppointmentRestControllerTests using Java 21.0.10 with PID 19560 (started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
+2026-05-02T22:13:14.081-04:00  INFO 19560 --- [seguridadcalidad] [main] c.d.s.AppointmentRestControllerTests     : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T22:13:24.240-04:00  INFO 19560 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-05-02T22:13:27.117-04:00  INFO 19560 --- [seguridadcalidad] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-02T22:13:27.120-04:00  INFO 19560 --- [seguridadcalidad] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-02T22:13:27.127-04:00  INFO 19560 --- [seguridadcalidad] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 7 ms
+2026-05-02T22:13:27.300-04:00  INFO 19560 --- [seguridadcalidad] [main] c.d.s.AppointmentRestControllerTests     : Started AppointmentRestControllerTests in 14.567 seconds (process running for 21.445)
+2026-05-02T22:13:27.863-04:00  WARN 19560 --- [seguridadcalidad] [main] c.d.s.AppointmentRestController          : POST /api/appointments missing authentication token
+2026-05-02T22:13:28.361-04:00  WARN 19560 --- [seguridadcalidad] [main] c.d.s.AppointmentRestController          : GET /api/appointments missing authentication token
+2026-05-02T22:13:28.531-04:00  INFO 19560 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.AuthControllerTests]: AuthControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-02T22:13:28.543-04:00  INFO 19560 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.AuthControllerTests
+2026-05-02T22:13:29.004-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.AuthController   : POST /api/auth/login error
+
+java.lang.RuntimeException: boom
+	at com.duoc.seguridadcalidad.BackendService.login(BackendService.java:34) ~[classes/:na]
+	at com.duoc.seguridadcalidad.AuthController.createAuthenticationToken(AuthController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at com.duoc.seguridadcalidad.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:18) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:245) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199) ~[spring-test-7.0.5.jar:7.0.5]
+	at com.duoc.seguridadcalidad.AuthControllerTests.loginShouldReturnInternalServerErrorOnUnexpectedException(AuthControllerTests.java:79) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.4.jar:3.5.4]
+
+2026-05-02T22:13:29.152-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.AuthController   : Error de conexión con el backend: down
+2026-05-02T22:13:30.157-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend createPet failed status=400 BAD_REQUEST body=
+2026-05-02T22:13:30.237-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend createInvoice failed status=400 BAD_REQUEST body=
+2026-05-02T22:13:30.248-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend updatePet failed status=404 NOT_FOUND body=
+2026-05-02T22:13:30.273-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getInvoiceByAppointmentId failed status=404 NOT_FOUND body=
+2026-05-02T22:13:30.299-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend deletePet failed status=404 NOT_FOUND body=
+2026-05-02T22:13:30.323-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getAppointments failed status=401 UNAUTHORIZED body=
+2026-05-02T22:13:30.336-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getInvoices failed status=401 UNAUTHORIZED body=
+2026-05-02T22:13:30.363-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend searchPets failed status=400 BAD_REQUEST body=
+2026-05-02T22:13:30.391-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getPets failed status=500 INTERNAL_SERVER_ERROR body=
+2026-05-02T22:13:30.417-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend login failed status=401 UNAUTHORIZED body=
+2026-05-02T22:13:30.454-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend createAppointment failed status=400 BAD_REQUEST body=
+2026-05-02T22:13:30.472-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getInvoiceById failed status=404 NOT_FOUND body=
+2026-05-02T22:13:30.487-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getPatients failed status=403 FORBIDDEN body=
+2026-05-02T22:13:30.537-04:00 ERROR 19560 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend createPatient failed status=400 BAD_REQUEST body=
+2026-05-02T22:13:30.597-04:00  INFO 19560 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.InvoiceControllerTests]: InvoiceControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-02T22:13:30.616-04:00  INFO 19560 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.InvoiceControllerTests
+2026-05-02T22:13:30.820-04:00  WARN 19560 --- [seguridadcalidad] [main] c.d.seguridadcalidad.InvoiceController   : POST /invoices/appointments/10 missing authentication token
+2026-05-02T22:13:31.375-04:00  INFO 19560 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.PatientRestControllerTests]: PatientRestControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-02T22:13:31.384-04:00  INFO 19560 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.PatientRestControllerTests
+2026-05-02T22:13:31.429-04:00  WARN 19560 --- [seguridadcalidad] [main] c.d.s.PatientRestController              : POST /api/patients missing authentication token
+2026-05-02T22:13:31.482-04:00  WARN 19560 --- [seguridadcalidad] [main] c.d.s.PatientRestController              : GET /api/patients missing authentication token
+2026-05-02T22:13:31.552-04:00  INFO 19560 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.PetRestControllerTests]: PetRestControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-02T22:13:31.562-04:00  INFO 19560 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.PetRestControllerTests
+2026-05-02T22:13:31.582-04:00  WARN 19560 --- [seguridadcalidad] [main] c.d.seguridadcalidad.PetRestController   : POST /api/pets missing authentication token
+2026-05-02T22:13:31.733-04:00  WARN 19560 --- [seguridadcalidad] [main] c.d.seguridadcalidad.PetRestController   : PUT /api/pets/10 missing authentication token
+2026-05-02T22:13:31.872-04:00  WARN 19560 --- [seguridadcalidad] [main] c.d.seguridadcalidad.PetRestController   : DELETE /api/pets/10 missing authentication token
+2026-05-02T22:13:32.007-04:00  INFO 19560 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.SeguridadcalidadApplicationTests]: SeguridadcalidadApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-02T22:13:32.016-04:00  INFO 19560 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.SeguridadcalidadApplicationTests
+2026-05-02T22:13:32.230-04:00  INFO 19560 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : Starting SeguridadcalidadApplicationTests using Java 21.0.10 with PID 19560 (started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
+2026-05-02T22:13:32.234-04:00  INFO 19560 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T22:13:34.073-04:00  INFO 19560 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-05-02T22:13:34.489-04:00  INFO 19560 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : Started SeguridadcalidadApplicationTests in 2.454 seconds (process running for 28.634)
+2026-05-02T22:25:15.685-04:00  INFO 24972 --- [seguridadcalidad] [main] c.d.s.AppointmentRestControllerTests     : Starting AppointmentRestControllerTests using Java 21.0.10 with PID 24972 (started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
+2026-05-02T22:25:15.696-04:00  INFO 24972 --- [seguridadcalidad] [main] c.d.s.AppointmentRestControllerTests     : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T22:25:23.819-04:00  INFO 24972 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-05-02T22:25:26.523-04:00  INFO 24972 --- [seguridadcalidad] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-05-02T22:25:26.525-04:00  INFO 24972 --- [seguridadcalidad] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-05-02T22:25:26.531-04:00  INFO 24972 --- [seguridadcalidad] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
+2026-05-02T22:25:26.665-04:00  INFO 24972 --- [seguridadcalidad] [main] c.d.s.AppointmentRestControllerTests     : Started AppointmentRestControllerTests in 12.117 seconds (process running for 20.375)
+2026-05-02T22:25:27.163-04:00  WARN 24972 --- [seguridadcalidad] [main] c.d.s.AppointmentRestController          : POST /api/appointments missing authentication token
+2026-05-02T22:25:27.973-04:00  WARN 24972 --- [seguridadcalidad] [main] c.d.s.AppointmentRestController          : GET /api/appointments missing authentication token
+2026-05-02T22:25:28.239-04:00  INFO 24972 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.AuthControllerTests]: AuthControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-02T22:25:28.255-04:00  INFO 24972 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.AuthControllerTests
+2026-05-02T22:25:28.724-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.AuthController   : POST /api/auth/login error
+
+java.lang.RuntimeException: boom
+	at com.duoc.seguridadcalidad.BackendService.login(BackendService.java:34) ~[classes/:na]
+	at com.duoc.seguridadcalidad.AuthController.createAuthenticationToken(AuthController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-7.0.5.jar:7.0.5]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar:6.1]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at com.duoc.seguridadcalidad.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:18) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:245) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.3.jar:7.0.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:160) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:127) ~[spring-test-7.0.5.jar:7.0.5]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:199) ~[spring-test-7.0.5.jar:7.0.5]
+	at com.duoc.seguridadcalidad.AuthControllerTests.loginShouldReturnInternalServerErrorOnUnexpectedException(AuthControllerTests.java:79) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.4.jar:3.5.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.4.jar:3.5.4]
+
+2026-05-02T22:25:28.968-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.AuthController   : Error de conexión con el backend: down
+2026-05-02T22:25:30.536-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend createPet failed status=400 BAD_REQUEST body=
+2026-05-02T22:25:30.635-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend createInvoice failed status=400 BAD_REQUEST body=
+2026-05-02T22:25:30.664-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend updatePet failed status=404 NOT_FOUND body=
+2026-05-02T22:25:30.713-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getInvoiceByAppointmentId failed status=404 NOT_FOUND body=
+2026-05-02T22:25:30.745-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend deletePet failed status=404 NOT_FOUND body=
+2026-05-02T22:25:30.808-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getAppointments failed status=401 UNAUTHORIZED body=
+2026-05-02T22:25:30.822-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getInvoices failed status=401 UNAUTHORIZED body=
+2026-05-02T22:25:30.887-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend searchPets failed status=400 BAD_REQUEST body=
+2026-05-02T22:25:30.924-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getPets failed status=500 INTERNAL_SERVER_ERROR body=
+2026-05-02T22:25:30.963-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend login failed status=401 UNAUTHORIZED body=
+2026-05-02T22:25:30.999-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend createAppointment failed status=400 BAD_REQUEST body=
+2026-05-02T22:25:31.062-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getInvoiceById failed status=404 NOT_FOUND body=
+2026-05-02T22:25:31.083-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend getPatients failed status=403 FORBIDDEN body=
+2026-05-02T22:25:31.155-04:00 ERROR 24972 --- [seguridadcalidad] [main] c.duoc.seguridadcalidad.BackendService   : Backend createPatient failed status=400 BAD_REQUEST body=
+2026-05-02T22:25:31.263-04:00  INFO 24972 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.InvoiceControllerTests]: InvoiceControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-02T22:25:31.296-04:00  INFO 24972 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.InvoiceControllerTests
+2026-05-02T22:25:31.565-04:00  WARN 24972 --- [seguridadcalidad] [main] c.d.seguridadcalidad.InvoiceController   : POST /invoices/appointments/10 missing authentication token
+2026-05-02T22:25:32.287-04:00  INFO 24972 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.PatientRestControllerTests]: PatientRestControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-02T22:25:32.294-04:00  INFO 24972 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.PatientRestControllerTests
+2026-05-02T22:25:32.316-04:00  WARN 24972 --- [seguridadcalidad] [main] c.d.s.PatientRestController              : POST /api/patients missing authentication token
+2026-05-02T22:25:32.480-04:00  WARN 24972 --- [seguridadcalidad] [main] c.d.s.PatientRestController              : GET /api/patients missing authentication token
+2026-05-02T22:25:32.811-04:00  INFO 24972 --- [seguridadcalidad] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.duoc.seguridadcalidad.PetRestControllerTests]: PetRestControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-05-02T22:25:32.856-04:00  INFO 24972 --- [seguridadcalidad] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.duoc.seguridadcalidad.SeguridadcalidadApplication for test class com.duoc.seguridadcalidad.PetRestControllerTests
+2026-05-02T22:25:32.922-04:00  WARN 24972 --- [seguridadcalidad] [main] c.d.seguridadcalidad.PetRestController   : POST /api/pets missing authentication token
+2026-05-02T22:25:32.996-04:00  WARN 24972 --- [seguridadcalidad] [main] c.d.seguridadcalidad.PetRestController   : PUT /api/pets/10 missing authentication token
+2026-05-02T22:25:33.101-04:00  WARN 24972 --- [seguridadcalidad] [main] c.d.seguridadcalidad.PetRestController   : DELETE /api/pets/10 missing authentication token
+2026-05-02T22:25:33.559-04:00  INFO 24972 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : Starting SeguridadcalidadApplication using Java 21.0.10 with PID 24972 (started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
+2026-05-02T22:25:33.560-04:00  INFO 24972 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T22:25:35.047-04:00  INFO 24972 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplication        : Started SeguridadcalidadApplication in 1.819 seconds (process running for 28.757)
+2026-05-02T22:25:35.200-04:00  INFO 24972 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : Starting SeguridadcalidadApplicationTests using Java 21.0.10 with PID 24972 (started by ariel in C:\Users\nikoc\OneDrive\Documentos\DuocUC\Semestre6\Seg y Cal de Desarrollo\Proyectos\Semana8\frontend)
+2026-05-02T22:25:35.203-04:00  INFO 24972 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2026-05-02T22:25:36.149-04:00  INFO 24972 --- [seguridadcalidad] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name users
+2026-05-02T22:25:36.402-04:00  INFO 24972 --- [seguridadcalidad] [main] c.d.s.SeguridadcalidadApplicationTests   : Started SeguridadcalidadApplicationTests in 1.307 seconds (process running for 30.111)

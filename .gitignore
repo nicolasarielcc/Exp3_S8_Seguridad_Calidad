@@ -27,3 +27,6 @@
 **/*passwd*
 **/*token*
 **/*secret*
+
+**/imgs/**
+**/images/**

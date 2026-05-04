@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AuthController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">frontend-seguridadcalidad</a> &gt; <a href="index.source.html" class="el_package">com.duoc.seguridadcalidad</a> &gt; <span class="el_source">AuthController.java</span></div><h1>AuthController.java</h1><pre class="source lang-java linenums">package com.duoc.seguridadcalidad;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.HttpStatusCodeException;
+import org.springframework.web.client.ResourceAccessException;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+@RestController
+@RequestMapping(&quot;/api/auth&quot;)
+public class AuthController {
+
+<span class="fc" id="L22">    private static final Logger log = LoggerFactory.getLogger(AuthController.class);</span>
+    private final BackendService backendService;
+    private final JwtCookieService jwtCookieService;
+
+<span class="fc" id="L26">    public AuthController(BackendService backendService, JwtCookieService jwtCookieService) {</span>
+<span class="fc" id="L27">        this.backendService = backendService;</span>
+<span class="fc" id="L28">        this.jwtCookieService = jwtCookieService;</span>
+<span class="fc" id="L29">    }</span>
+
+    @PostMapping(&quot;/login&quot;)
+    public ResponseEntity&lt;?&gt; createAuthenticationToken(@RequestBody AuthRequest authRequest) {
+<span class="fc" id="L33">        log.debug(&quot;POST /api/auth/login req={}&quot;, authRequest);</span>
+        try {
+<span class="fc" id="L35">            AuthResponse authResponse = backendService.login(authRequest);</span>
+<span class="fc" id="L36">            log.debug(&quot;POST /api/auth/login authentication succeeded&quot;);</span>
+<span class="fc" id="L37">            return ResponseEntity.noContent()</span>
+<span class="fc" id="L38">                    .header(HttpHeaders.SET_COOKIE, jwtCookieService.createAuthCookie(authResponse.getToken()).toString())</span>
+<span class="fc" id="L39">                    .build();</span>
+<span class="fc" id="L40">        } catch (HttpStatusCodeException ex) {</span>
+            // El backend respondió con un error específico (ej: 401 Credenciales inválidas)
+<span class="fc" id="L42">            return ResponseEntity.status(ex.getStatusCode()).body(ex.getResponseBodyAsString());</span>
+<span class="fc" id="L43">        } catch (ResourceAccessException ex) {</span>
+            // No se pudo conectar al backend (Backend down o URL incorrecta)
+<span class="fc" id="L45">            log.error(&quot;Error de conexión con el backend: {}&quot;, ex.getMessage());</span>
+<span class="fc" id="L46">            return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(&quot;El servicio de backend no está disponible.&quot;);</span>
+<span class="fc" id="L47">        } catch (Exception ex) {</span>
+<span class="fc" id="L48">            log.error(&quot;POST /api/auth/login error&quot;, ex);</span>
+<span class="fc" id="L49">            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(&quot;Error interno del servidor&quot;);</span>
+        }
+    }
+
+    @PostMapping(&quot;/logout&quot;)
+    public ResponseEntity&lt;Void&gt; logout() {
+<span class="fc" id="L55">        return ResponseEntity.noContent()</span>
+<span class="fc" id="L56">                .header(HttpHeaders.SET_COOKIE, jwtCookieService.clearAuthCookie().toString())</span>
+<span class="fc" id="L57">                .build();</span>
+    }
+
+    @GetMapping(&quot;/session&quot;)
+    public ResponseEntity&lt;Void&gt; session(HttpServletRequest request) {
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        return jwtCookieService.extractToken(request) == null</span>
+<span class="fc" id="L63">                ? ResponseEntity.status(HttpStatus.UNAUTHORIZED).build()</span>
+<span class="fc" id="L64">                : ResponseEntity.noContent().build();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

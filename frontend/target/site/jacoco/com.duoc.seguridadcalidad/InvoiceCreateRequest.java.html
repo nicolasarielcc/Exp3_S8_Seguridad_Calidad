@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InvoiceCreateRequest.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">frontend-seguridadcalidad</a> &gt; <a href="index.source.html" class="el_package">com.duoc.seguridadcalidad</a> &gt; <span class="el_source">InvoiceCreateRequest.java</span></div><h1>InvoiceCreateRequest.java</h1><pre class="source lang-java linenums">package com.duoc.seguridadcalidad;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="fc" id="L8">public class InvoiceCreateRequest {</span>
+    private LocalDate issueDate;
+    private BigDecimal vatRate;
+    private String notes;
+<span class="fc" id="L12">    private List&lt;InvoiceLineItem&gt; items = new ArrayList&lt;&gt;();</span>
+
+    public LocalDate getIssueDate() {
+<span class="fc" id="L15">        return issueDate;</span>
+    }
+
+    public void setIssueDate(LocalDate issueDate) {
+<span class="fc" id="L19">        this.issueDate = issueDate;</span>
+<span class="fc" id="L20">    }</span>
+
+    public BigDecimal getVatRate() {
+<span class="fc" id="L23">        return vatRate;</span>
+    }
+
+    public void setVatRate(BigDecimal vatRate) {
+<span class="fc" id="L27">        this.vatRate = vatRate;</span>
+<span class="fc" id="L28">    }</span>
+
+    public String getNotes() {
+<span class="fc" id="L31">        return notes;</span>
+    }
+
+    public void setNotes(String notes) {
+<span class="fc" id="L35">        this.notes = notes;</span>
+<span class="fc" id="L36">    }</span>
+
+    public List&lt;InvoiceLineItem&gt; getItems() {
+<span class="fc" id="L39">        return items;</span>
+    }
+
+    public void setItems(List&lt;InvoiceLineItem&gt; items) {
+<span class="fc" id="L43">        this.items = items;</span>
+<span class="fc" id="L44">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InvoiceLineItem.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">backendseguridadcalidad</a> &gt; <a href="index.source.html" class="el_package">com.duoc.backend</a> &gt; <span class="el_source">InvoiceLineItem.java</span></div><h1>InvoiceLineItem.java</h1><pre class="source lang-java linenums">package com.duoc.backend;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
+
+import java.math.BigDecimal;
+
+@Entity
+public class InvoiceLineItem {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = &quot;invoice_id&quot;, nullable = false)
+    @JsonBackReference
+    private Invoice invoice;
+
+    @Enumerated(EnumType.STRING)
+    private InvoiceLineItemType type;
+
+    private String description;
+
+    private Integer quantity;
+
+    private BigDecimal unitPrice;
+
+    private BigDecimal lineTotal;
+
+<span class="fc" id="L30">    public InvoiceLineItem() {</span>
+<span class="fc" id="L31">    }</span>
+
+<span class="fc" id="L33">    public InvoiceLineItem(InvoiceLineItemType type, String description, Integer quantity, BigDecimal unitPrice) {</span>
+<span class="fc" id="L34">        this.type = type;</span>
+<span class="fc" id="L35">        this.description = description;</span>
+<span class="fc" id="L36">        this.quantity = quantity;</span>
+<span class="fc" id="L37">        this.unitPrice = unitPrice;</span>
+<span class="fc" id="L38">    }</span>
+
+    public void recalculateLineTotal() {
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        BigDecimal safeUnitPrice = unitPrice != null ? unitPrice : BigDecimal.ZERO;</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        int safeQuantity = quantity != null ? quantity : 0;</span>
+<span class="fc" id="L43">        this.lineTotal = safeUnitPrice.multiply(BigDecimal.valueOf(safeQuantity));</span>
+<span class="fc" id="L44">    }</span>
+
+    public Integer getId() {
+<span class="nc" id="L47">        return id;</span>
+    }
+
+    public void setId(Integer id) {
+<span class="nc" id="L51">        this.id = id;</span>
+<span class="nc" id="L52">    }</span>
+
+    public Invoice getInvoice() {
+<span class="fc" id="L55">        return invoice;</span>
+    }
+
+    public void setInvoice(Invoice invoice) {
+<span class="fc" id="L59">        this.invoice = invoice;</span>
+<span class="fc" id="L60">    }</span>
+
+    public InvoiceLineItemType getType() {
+<span class="fc" id="L63">        return type;</span>
+    }
+
+    public void setType(InvoiceLineItemType type) {
+<span class="fc" id="L67">        this.type = type;</span>
+<span class="fc" id="L68">    }</span>
+
+    public String getDescription() {
+<span class="fc" id="L71">        return description;</span>
+    }
+
+    public void setDescription(String description) {
+<span class="fc" id="L75">        this.description = description;</span>
+<span class="fc" id="L76">    }</span>
+
+    public Integer getQuantity() {
+<span class="fc" id="L79">        return quantity;</span>
+    }
+
+    public void setQuantity(Integer quantity) {
+<span class="fc" id="L83">        this.quantity = quantity;</span>
+<span class="fc" id="L84">    }</span>
+
+    public BigDecimal getUnitPrice() {
+<span class="fc" id="L87">        return unitPrice;</span>
+    }
+
+    public void setUnitPrice(BigDecimal unitPrice) {
+<span class="fc" id="L91">        this.unitPrice = unitPrice;</span>
+<span class="fc" id="L92">    }</span>
+
+    public BigDecimal getLineTotal() {
+<span class="fc" id="L95">        return lineTotal;</span>
+    }
+
+    public void setLineTotal(BigDecimal lineTotal) {
+<span class="nc" id="L99">        this.lineTotal = lineTotal;</span>
+<span class="nc" id="L100">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

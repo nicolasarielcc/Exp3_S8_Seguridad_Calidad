@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InvoiceController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">backendseguridadcalidad</a> &gt; <a href="index.source.html" class="el_package">com.duoc.backend</a> &gt; <span class="el_source">InvoiceController.java</span></div><h1>InvoiceController.java</h1><pre class="source lang-java linenums">package com.duoc.backend;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+@RestController
+@RequestMapping(&quot;/invoices&quot;)
+<span class="fc" id="L17">public class InvoiceController {</span>
+
+<span class="fc" id="L19">    private static final BigDecimal DEFAULT_VAT_RATE = new BigDecimal(&quot;0.19&quot;);</span>
+
+    @Autowired
+    private InvoiceRepository invoiceRepository;
+
+    @Autowired
+    private AppointmentRepository appointmentRepository;
+
+    @PostMapping(&quot;/appointments/{appointmentId}&quot;)
+    public ResponseEntity&lt;?&gt; createInvoiceForAppointment(@PathVariable Integer appointmentId, @RequestBody Invoice invoice) {
+        try {
+<span class="fc bfc" id="L30" title="All 2 branches covered.">            if (!appointmentRepository.existsById(appointmentId)) {</span>
+<span class="fc" id="L31">                return ResponseEntity.badRequest().body(&quot;Appointment not found for appointmentId: &quot; + appointmentId);</span>
+            }
+
+<span class="fc" id="L34">            List&lt;Invoice&gt; existingInvoices = invoiceRepository.findByAppointmentId(appointmentId);</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            if (!existingInvoices.isEmpty()) {</span>
+<span class="fc" id="L36">                return ResponseEntity.status(HttpStatus.CONFLICT)</span>
+<span class="fc" id="L37">                        .body(&quot;An invoice already exists for appointmentId: &quot; + appointmentId);</span>
+            }
+
+<span class="fc" id="L40">            String validationError = validateInvoicePayload(invoice);</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">            if (validationError != null) {</span>
+<span class="fc" id="L42">                return ResponseEntity.badRequest().body(validationError);</span>
+            }
+
+<span class="fc" id="L45">            invoice.setAppointmentId(appointmentId);</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">            if (invoice.getIssueDate() == null) {</span>
+<span class="fc" id="L47">                invoice.setIssueDate(LocalDate.now());</span>
+            }
+<span class="fc bfc" id="L49" title="All 2 branches covered.">            if (invoice.getVatRate() == null) {</span>
+<span class="fc" id="L50">                invoice.setVatRate(DEFAULT_VAT_RATE);</span>
+            }
+
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            for (InvoiceLineItem item : invoice.getItems()) {</span>
+<span class="fc" id="L54">                item.setInvoice(invoice);</span>
+<span class="fc" id="L55">            }</span>
+<span class="fc" id="L56">            invoice.calculateTotals();</span>
+
+<span class="fc" id="L58">            Invoice savedInvoice = invoiceRepository.save(invoice);</span>
+<span class="fc" id="L59">            return ResponseEntity.status(HttpStatus.CREATED).body(savedInvoice);</span>
+<span class="fc" id="L60">        } catch (Exception e) {</span>
+<span class="fc" id="L61">            Map&lt;String, String&gt; error = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L62">            error.put(&quot;message&quot;, &quot;Error al generar factura: &quot; + e.getMessage());</span>
+<span class="fc" id="L63">            return ResponseEntity.badRequest().body(error);</span>
+        }
+    }
+
+    @GetMapping
+    public ResponseEntity&lt;Iterable&lt;Invoice&gt;&gt; getAllInvoices() {
+        try {
+<span class="fc" id="L70">            Iterable&lt;Invoice&gt; invoices = invoiceRepository.findAll();</span>
+<span class="fc" id="L71">            return ResponseEntity.ok(invoices);</span>
+<span class="fc" id="L72">        } catch (Exception e) {</span>
+<span class="fc" id="L73">            return ResponseEntity.internalServerError().build();</span>
+        }
+    }
+
+    @GetMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;Invoice&gt; getInvoiceById(@PathVariable Integer id) {
+        try {
+<span class="fc" id="L80">            Optional&lt;Invoice&gt; invoice = invoiceRepository.findById(id);</span>
+<span class="fc" id="L81">            return invoice.map(ResponseEntity::ok).orElseGet(() -&gt; ResponseEntity.notFound().build());</span>
+<span class="fc" id="L82">        } catch (Exception e) {</span>
+<span class="fc" id="L83">            return ResponseEntity.internalServerError().build();</span>
+        }
+    }
+
+    @GetMapping(&quot;/appointment/{appointmentId}&quot;)
+    public ResponseEntity&lt;?&gt; getInvoiceByAppointment(@PathVariable Integer appointmentId) {
+        try {
+<span class="fc bfc" id="L90" title="All 2 branches covered.">            if (!appointmentRepository.existsById(appointmentId)) {</span>
+<span class="fc" id="L91">                return ResponseEntity.notFound().build();</span>
+            }
+
+<span class="fc" id="L94">            List&lt;Invoice&gt; invoices = invoiceRepository.findByAppointmentId(appointmentId);</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">            if (invoices.isEmpty()) {</span>
+<span class="fc" id="L96">                return ResponseEntity.notFound().build();</span>
+            }
+<span class="fc" id="L98">            return ResponseEntity.ok(invoices.get(0));</span>
+<span class="fc" id="L99">        } catch (Exception e) {</span>
+<span class="fc" id="L100">            return ResponseEntity.internalServerError().build();</span>
+        }
+    }
+
+    private String validateInvoicePayload(Invoice invoice) {
+<span class="fc bfc" id="L105" title="All 2 branches covered.">        if (invoice == null) {</span>
+<span class="fc" id="L106">            return &quot;Invoice payload is required&quot;;</span>
+        }
+
+<span class="pc bpc" id="L109" title="1 of 4 branches missed.">        if (invoice.getItems() == null || invoice.getItems().isEmpty()) {</span>
+<span class="fc" id="L110">            return &quot;Invoice must include at least one detail item&quot;;</span>
+        }
+
+<span class="fc bfc" id="L113" title="All 4 branches covered.">        if (invoice.getVatRate() != null &amp;&amp; invoice.getVatRate().compareTo(BigDecimal.ZERO) &lt; 0) {</span>
+<span class="fc" id="L114">            return &quot;vatRate cannot be negative&quot;;</span>
+        }
+
+<span class="fc bfc" id="L117" title="All 2 branches covered.">        for (int i = 0; i &lt; invoice.getItems().size(); i++) {</span>
+<span class="fc" id="L118">            InvoiceLineItem item = invoice.getItems().get(i);</span>
+<span class="fc" id="L119">            int lineNumber = i + 1;</span>
+
+<span class="fc bfc" id="L121" title="All 2 branches covered.">            if (item.getType() == null) {</span>
+<span class="fc" id="L122">                return &quot;Item &quot; + lineNumber + &quot; must define type (SERVICE, MEDICATION, ADDITIONAL_CHARGE)&quot;;</span>
+            }
+
+<span class="fc bfc" id="L125" title="All 4 branches covered.">            if (item.getDescription() == null || item.getDescription().trim().isEmpty()) {</span>
+<span class="fc" id="L126">                return &quot;Item &quot; + lineNumber + &quot; must include a description&quot;;</span>
+            }
+
+<span class="fc bfc" id="L129" title="All 4 branches covered.">            if (item.getQuantity() == null || item.getQuantity() &lt;= 0) {</span>
+<span class="fc" id="L130">                return &quot;Item &quot; + lineNumber + &quot; must include a quantity greater than zero&quot;;</span>
+            }
+
+<span class="fc bfc" id="L133" title="All 4 branches covered.">            if (item.getUnitPrice() == null || item.getUnitPrice().compareTo(BigDecimal.ZERO) &lt; 0) {</span>
+<span class="fc" id="L134">                return &quot;Item &quot; + lineNumber + &quot; must include a unitPrice greater or equal to zero&quot;;</span>
+            }
+        }
+
+<span class="fc" id="L138">        return null;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>

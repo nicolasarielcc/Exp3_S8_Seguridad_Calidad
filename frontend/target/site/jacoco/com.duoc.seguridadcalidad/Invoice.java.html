@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Invoice.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">frontend-seguridadcalidad</a> &gt; <a href="index.source.html" class="el_package">com.duoc.seguridadcalidad</a> &gt; <span class="el_source">Invoice.java</span></div><h1>Invoice.java</h1><pre class="source lang-java linenums">package com.duoc.seguridadcalidad;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Invoice {
+    private Long id;
+    private Long appointmentId;
+    private LocalDate issueDate;
+    private BigDecimal vatRate;
+    private BigDecimal subtotal;
+    private BigDecimal vatAmount;
+    private BigDecimal total;
+    private String notes;
+<span class="fc" id="L17">    private List&lt;InvoiceLineItem&gt; items = new ArrayList&lt;&gt;();</span>
+
+<span class="fc" id="L19">    public Invoice() {</span>
+<span class="fc" id="L20">    }</span>
+
+    public Invoice(Long id, Long appointmentId, LocalDate issueDate, BigDecimal vatRate, BigDecimal subtotal,
+<span class="fc" id="L23">                   BigDecimal vatAmount, BigDecimal total, String notes, List&lt;InvoiceLineItem&gt; items) {</span>
+<span class="fc" id="L24">        this.id = id;</span>
+<span class="fc" id="L25">        this.appointmentId = appointmentId;</span>
+<span class="fc" id="L26">        this.issueDate = issueDate;</span>
+<span class="fc" id="L27">        this.vatRate = vatRate;</span>
+<span class="fc" id="L28">        this.subtotal = subtotal;</span>
+<span class="fc" id="L29">        this.vatAmount = vatAmount;</span>
+<span class="fc" id="L30">        this.total = total;</span>
+<span class="fc" id="L31">        this.notes = notes;</span>
+<span class="fc" id="L32">        this.items = items;</span>
+<span class="fc" id="L33">    }</span>
+
+    public Long getId() {
+<span class="fc" id="L36">        return id;</span>
+    }
+
+    public void setId(Long id) {
+<span class="fc" id="L40">        this.id = id;</span>
+<span class="fc" id="L41">    }</span>
+
+    public Long getAppointmentId() {
+<span class="fc" id="L44">        return appointmentId;</span>
+    }
+
+    public void setAppointmentId(Long appointmentId) {
+<span class="fc" id="L48">        this.appointmentId = appointmentId;</span>
+<span class="fc" id="L49">    }</span>
+
+    public LocalDate getIssueDate() {
+<span class="fc" id="L52">        return issueDate;</span>
+    }
+
+    public void setIssueDate(LocalDate issueDate) {
+<span class="fc" id="L56">        this.issueDate = issueDate;</span>
+<span class="fc" id="L57">    }</span>
+
+    public BigDecimal getVatRate() {
+<span class="fc" id="L60">        return vatRate;</span>
+    }
+
+    public void setVatRate(BigDecimal vatRate) {
+<span class="fc" id="L64">        this.vatRate = vatRate;</span>
+<span class="fc" id="L65">    }</span>
+
+    public BigDecimal getSubtotal() {
+<span class="fc" id="L68">        return subtotal;</span>
+    }
+
+    public void setSubtotal(BigDecimal subtotal) {
+<span class="fc" id="L72">        this.subtotal = subtotal;</span>
+<span class="fc" id="L73">    }</span>
+
+    public BigDecimal getVatAmount() {
+<span class="fc" id="L76">        return vatAmount;</span>
+    }
+
+    public void setVatAmount(BigDecimal vatAmount) {
+<span class="fc" id="L80">        this.vatAmount = vatAmount;</span>
+<span class="fc" id="L81">    }</span>
+
+    public BigDecimal getTotal() {
+<span class="fc" id="L84">        return total;</span>
+    }
+
+    public void setTotal(BigDecimal total) {
+<span class="fc" id="L88">        this.total = total;</span>
+<span class="fc" id="L89">    }</span>
+
+    public String getNotes() {
+<span class="fc" id="L92">        return notes;</span>
+    }
+
+    public void setNotes(String notes) {
+<span class="fc" id="L96">        this.notes = notes;</span>
+<span class="fc" id="L97">    }</span>
+
+    public List&lt;InvoiceLineItem&gt; getItems() {
+<span class="fc" id="L100">        return items;</span>
+    }
+
+    public void setItems(List&lt;InvoiceLineItem&gt; items) {
+<span class="fc" id="L104">        this.items = items;</span>
+<span class="fc" id="L105">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.14.202510111229</span></div></body></html>
